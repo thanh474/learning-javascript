@@ -1,4 +1,4 @@
-/**
+/** Bài 1:
  * Tạo một đối tượng student gồm các property name, sex, age
  * Example:
   name: "CodersX",
@@ -18,3 +18,8 @@ function showInfo(obj) {
   this.age = age;
   this.sex = sex;
 }
+
+typeof student.name
+=================================================
+
+Bài Tập 2.
