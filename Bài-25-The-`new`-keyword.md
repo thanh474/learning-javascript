@@ -1,0 +1,20 @@
+/**
+ * Tạo một đối tượng student gồm các property name, sex, age
+ * Example:
+  name: "CodersX",
+  sex: "Male",
+  age: 1
+ * Viết hàm showInfo trả về object đó
+*/
+
+var student = {
+  name: 'thanh', 
+  sex: "Male",
+  age: 21
+}
+
+function showInfo(obj) {
+  this.name = name;
+  this.age = age;
+  this.sex = sex;
+}
