@@ -23,3 +23,81 @@ typeof student.name
 =================================================
 
 Bài Tập 2.
+/**
+ * Viết hàm xoá thuộc tính (prop) khỏi object student
+ * Trả về object đã được xoá
+ * Example:
+ *  removeProp("name") = { class: “VI”, rollno: 12 }
+*/
+
+function removeProp(prop) {
+    var student = {
+            name : "David Rayy",
+            class : "VI",
+            rollno : 12
+        }
+  // chỉ viết code ở dưới dòng này.
+    for(var key in student)
+   if(key==prop){ 
+      delete student[key];
+   }
+  return student;
+}
+
+input : removeProp("name")
+output: { class: "VI", rollno: 12 }
+==================================================
+Bài tập 3.
+/**
+ * Viết hàm countProperty để in ra độ dài của một đối tượng
+ * @param {object}
+ * @return {number}
+ * 
+ * Example: 
+ * var student = {
+ *      name: "Jerry", 
+ *      age: 14,
+ *      role: "student"
+ *  }
+ * lengthObj(student); // length: 3
+}
+*/
+
+function countProperty(obj) {
+  // viết code ở đây
+  var count =0 ;
+  for( var key in obj){
+    
+    count ++ 
+    
+  }return count;
+}
+
+INPUT: countProperty({ name: "Herry", age: 10 })
+OUTPUT: 2
+==================================================
+Bài tập 4.
+/**
+ * Viết hàm xây dựng Shape để tạo các đối tượng hình học có các thuộc tính sau:
+ *  {
+ *    color: String,
+ *    shape: String,
+ *    fill: boolean
+ *  }
+*/
+
+function Shape(color, shape, fill) {
+  // Your code here
+  this.color = color;
+  this.shape = shape;
+  this.fill = fill;
+}
+
+var shape1 = new Shape("red", "rectangle", true);
+var shape2 = new Shape("orange", "triangle", false);
+var shape3 = new Shape("tomato", "circle", true);
+  
+  
+INPUT: typeof shape1
+OUTPUT: 'object'
+========================================================
