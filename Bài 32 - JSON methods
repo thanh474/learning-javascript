@@ -1,0 +1,49 @@
+Bài tập 1:
+/**
+ * 1. Sử dụng module fs để đọc file `data.json`
+ * 2. Dùng JSON.parse để chuyển đổi string đọc được ở bước 1 sang Object
+ * 3. Log property `name` từ object ở bước 2
+ * 4. Thêm 1 property `members` là một array, truyền vào 1 object mô tả về bạn
+ * 5. Ghi lại dữ liệu vào file data.json
+ * 6. Mở file data.json để kiểm chứng xem bạn làm đúng không
+ */
+
+//sử dụng module fs đẻ đọc file data.json 
+var fs = require('fs');
+
+//Đọc file  data.json 
+var read = fs.readFileSync('data.json', {encoding: "utf8"});
+
+//Chuyển đổi kiểu từ json thành object
+var objRead = JSON.parse(read)
+console.log(objRead)
+
+console.log(objRead[0].fullName)
+
+// var members = [
+//  {ten: 'Thanh', 
+//  fullName: 'Bùi Công Thành'},
+//  {tuoi: 21},
+//  {gioiTinh: 'nam'}
+// ];
+
+// var jsonWrite = JSON.stringify(members);
+// //console.log(jsonWrite)
+// fs.writeFileSync('data.json',jsonWrite);
+
+======================================================
+
+bài tạp 2:
+/**
+ * Chuyển obj sau về dạng JSON và gán cho biến json
+ */
+
+var obj = { name: "CodersX", age: 1 }
+
+var json  =JSON.stringify(obj);
+
+json;
+
+
+INPUT: json;
+OUTPUT: '{"name":"CodersX","age":1}'
